@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Paola Sanz’s audiovisual portfolio. Content creation, video editing and documentary photography." data-copy-content="description">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="theme-color" content="#0b0b14">
+  <link rel="icon" href="./assets/logo-ps.webp" type="image/webp">
+  <link rel="stylesheet" href="./style.css?v=16">
+  <script>
+    const fragment = location.hash;
+    const sections = {"#proyectos":"proyectos/","#experiencia":"experiencia/","#sobre-mi":"sobre-mi/","#contacto":"contacto/"};
+    if (Object.hasOwn(sections, fragment)) {
+      location.replace(sections[fragment] + location.search);
+    } else if (fragment.startsWith("#proyecto/") && fragment !== "#proyecto/where-communication-begins") {
+      location.replace("./proyectos/" + location.search + fragment);
+    } else if (!fragment) {
+      let entered = false;
+      try {
+        entered = sessionStorage.getItem("creative-os-welcome-complete") === "1";
+      } catch {}
+      if (!entered) document.documentElement.classList.add("entry-pending", "boot-pending");
+    }
+  </script>
+  <script src="./content.js?v=28" defer></script>
+  <script src="./app.js?v=14" defer></script>
+  <script src="./paobot-motion.js?v=1" defer></script>
+  <script src="./paobot.js?v=4" defer></script>
+  <title>Paola Sanz · Creative OS</title>
+</head>
+<body>
+  <section class="entry-screen boot-screen" aria-labelledby="boot-title">
+    <div class="boot-content">
+      <header class="boot-heading">
+        <p class="boot-label" data-copy="bootLabel">CREATIVE OS / STARTUP</p>
+        <h1 id="boot-title">Paola <em>Sanz.</em></h1>
+        <p class="boot-role" data-copy="portfolio">Audiovisual portfolio</p>
+      </header>
+      <div class="entry-window boot-window">
+        <div class="window-bar">
+          <div class="traffic" aria-hidden="true"><i></i><i></i><i></i></div>
+          <span class="window-title">Terminal</span>
+        <div class="language-switch" role="group" aria-label="Language" data-copy-aria="language" hidden>
+          <button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+          <button type="button" data-language="es" lang="es" aria-label="Español" aria-pressed="false">ES</button>
+        </div>
+        </div>
+        <div class="boot-terminal">
+          <ul class="boot-log" aria-hidden="true">
+            <li data-copy="bootStarting">Initializing Creative OS…</li>
+            <li hidden data-copy="bootDesktop">Preparing the desktop…</li>
+            <li hidden data-copy="bootProjects">Opening the project archive…</li>
+            <li hidden data-copy="bootReady">System ready.</li>
+          </ul>
+          <progress id="boot-progress" value="1" max="4" aria-label="Startup progress" data-copy-aria="bootProgress"></progress>
+        </div>
+      </div>
+      <button class="outline-button boot-skip" id="skip-boot" type="button" data-copy="bootSkip">Skip loading</button>
+    </div>
+  </section>
+  <section class="entry-screen welcome-screen" aria-labelledby="entry-title">
+    <div class="entry-window">
+      <div class="window-bar">
+        <div class="traffic" aria-hidden="true"><i></i><i></i><i></i></div>
+        <span class="window-title">Creative OS</span>
+        <div class="language-switch" role="group" aria-label="Language" data-copy-aria="language" hidden>
+          <button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+          <button type="button" data-language="es" lang="es" aria-label="Español" aria-pressed="false">ES</button>
+        </div>
+      </div>
+      <div class="entry-content">
+        <div class="entry-logo">
+          <img src="./assets/logo-ps.webp" width="104" height="104" alt="">
+        </div>
+        <div class="entry-progress" aria-hidden="true"></div>
+        <h1 id="entry-title">Paola <em>Sanz.</em></h1>
+        <p class="entry-role" data-copy="professionalTitle">Content creator and video editor</p>
+        <p class="entry-motto" data-copy="entryMotto">From Concept To Connection.</p>
+        <a id="enter-portfolio" class="primary-button" href="#contenido"><span data-copy="enter">Enter portfolio</span> <span aria-hidden="true"><i class="arrow"></i></span></a>
+      </div>
+    </div>
+  </section>
+  <a class="skip" href="#contenido" data-copy="skipContent">Skip to content</a>
+  <header class="topbar" id="inicio">
+    <div class="topbar-inner">
+      <a class="brand" href="./" aria-current="page" aria-label="Paola Sanz, home" data-copy-aria="brandHome">
+        <img src="./assets/logo-ps.webp" alt="" width="36" height="36">
+        <span>Paola Sanz</span><span class="brand-os">Creative OS</span>
+      </a>
+      <div class="top-actions">
+        <a class="top-contact" href="./contacto/"><span data-copy="contact">Contact</span> <span aria-hidden="true"><i class="arrow northeast"></i></span></a>
+        <div class="language-switch" role="group" aria-label="Language" data-copy-aria="language" hidden>
+          <button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+          <button type="button" data-language="es" lang="es" aria-label="Español" aria-pressed="false">ES</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="contenido" class="workspace" tabindex="-1">
+    <div class="window">
+      <div class="window-bar">
+        <div class="traffic" aria-hidden="true"><i></i><i></i><i></i></div>
+        <span class="window-title"><span aria-hidden="true">◫</span> <span data-copy="portfolio">Audiovisual portfolio</span></span>
+        <span class="window-state"><i aria-hidden="true"></i> <span data-copy="location">Madrid, Spain</span></span>
+      </div>
+      <div class="window-body">
+        <aside class="sidebar" aria-label="Portfolio shortcuts" data-copy-aria="portfolioShortcuts">
+          <nav class="sidebar-nav" aria-label="Main navigation" data-copy-aria="mainNavigation">
+            <p class="mini-label" data-copy="desktopLabel">DESKTOP</p>
+            <a href="./" aria-current="page"><span class="nav-icon home-icon" aria-hidden="true"></span> <span data-copy="home">Home</span></a>
+            <a href="./proyectos/"><span class="nav-icon folder-icon" aria-hidden="true"></span> <span data-copy="projects">Projects</span></a>
+            <a href="./experiencia/"><span class="nav-icon list-icon" aria-hidden="true"></span> <span data-copy="experience">Experience</span></a>
+            <a href="./sobre-mi/"><span class="nav-icon person-icon" aria-hidden="true"></span> <span data-copy="about">About me</span></a>
+            <a href="./contacto/"><span class="nav-icon mail-icon" aria-hidden="true"></span> <span data-copy="contact">Contact</span></a>
+          </nav>
+        </aside>
+        <div class="window-content">
+          <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+              <p class="hero-tag"><span aria-hidden="true"></span> <span data-copy="portfolioLabel">AUDIOVISUAL PORTFOLIO</span></p>
+              <h1 id="hero-title">Paola <em>Sanz.</em></h1>
+              <p class="hero-role" data-copy="professionalTitle">Content creator and video editor</p>
+              <p class="hero-summary" data-copy="heroSummary">I’m looking to join a content, communications or marketing team. I’ve produced, edited and published work for social media and editorial outlets.</p>
+              <div class="hero-actions">
+                <a class="primary-button" href="./proyectos/"><span data-copy="explore">Explore projects</span> <span aria-hidden="true"><i class="arrow southeast"></i></span></a>
+                <a class="outline-button link-button" href="./experiencia/"><span data-copy="viewExperienceCV">View experience and CV</span> <span aria-hidden="true"><i class="arrow northeast"></i></span></a>
+              </div>
+            </div>
+            <figure class="hero-visual" id="portrait-gallery" aria-label="Portraits of Paola Sanz" data-copy-aria="portraitGallery">
+              <div class="preview-bar"><span><i></i> <span data-copy="portrait">Portrait</span></span><span aria-hidden="true">⌗</span></div>
+              <div class="portrait-frame">
+                <img src="./assets/paola.webp" width="1024" height="1280" alt="Stylised portrait of Paola Sanz lit in blue and pink" data-copy-alt="portraitAlt" fetchpriority="high">
+                <span class="focus-mark" aria-hidden="true"></span>
+              </div>
+              <div class="portrait-controls" id="portrait-controls" hidden>
+                <button class="icon-button" type="button" data-portrait-step="-1" aria-label="Previous portrait" data-copy-aria="previousPortrait">‹</button>
+                <span class="film-strip" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+                <span class="portrait-count" id="portrait-count" role="status"></span>
+                <button class="icon-button" type="button" data-portrait-step="1" aria-label="Next portrait" data-copy-aria="nextPortrait">›</button>
+              </div>
+            </figure>
+          </section>
+
+          <aside class="journal-strip" aria-labelledby="journal-heading">
+            <div>
+              <p class="journal-label" data-copy="journalLabel">Personal visual journal</p>
+              <h2 id="journal-heading" data-copy="journalHeading">Where Communication Begins</h2>
+              <p class="journal-description" data-copy="journalLead">A collection of the people, places and small details that shape the way I observe, feel and create.</p>
+            </div>
+            <a class="outline-button link-button" data-project="where-communication-begins" href="#proyecto/where-communication-begins"><span data-copy="openJournal">Explore the journal</span> <span aria-hidden="true"><i class="arrow northeast"></i></span></a>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <footer class="footer"><span>Paola Sanz · Creative OS</span><a href="#inicio"><span data-copy="backTop">Back to top</span> <span aria-hidden="true"><i class="arrow up"></i></span></a></footer>
+  </main>
+
+  <aside class="paobot" id="paobot-dock" aria-label="PaoBot" hidden>
+    <div class="paobot-track">
+      <button class="paobot-launch" id="paobot" type="button" aria-label="PaoBot" aria-expanded="false" aria-controls="paobot-panel">
+        <span class="paobot-facing" aria-hidden="true">
+          <span class="pixel-cat">
+            <span class="pixel-tail"></span>
+            <span class="pixel-body"></span>
+            <span class="pixel-head">
+              <span class="pixel-ear"></span><span class="pixel-ear"></span>
+              <span class="pixel-eye"></span><span class="pixel-eye"></span>
+              <span class="pixel-nose"></span><span class="pixel-tongue"></span>
+            </span>
+            <span class="pixel-leg"></span><span class="pixel-leg"></span>
+            <span class="pixel-leg"></span><span class="pixel-leg"></span>
+          </span>
+        </span>
+      </button>
+    </div>
+    <div class="paobot-panel" id="paobot-panel" hidden>
+      <div class="paobot-header">
+        <strong>PaoBot</strong>
+        <button class="icon-button" id="paobot-close" type="button" aria-label="Hide PaoBot message" data-copy-aria="paobotClose">×</button>
+      </div>
+      <div class="paobot-body">
+        <div class="paobot-intro" id="paobot-intro" hidden>
+          <p lang="en">Use EN or ES at the top to change languages.</p>
+          <p lang="es">Usa EN o ES arriba para cambiar de idioma.</p>
+          <p data-copy="paobotHomeHint">Double-tap me if you want me to stay on Home.</p>
+        </div>
+        <p id="paobot-message" role="status"></p>
+        <div class="paobot-controls">
+          <button class="outline-button" id="paobot-language" type="button" data-copy="paobotLanguage" hidden>Show language switch</button>
+          <a class="primary-button" id="paobot-contact" href="./contacto/" data-copy="paobotContactLink" hidden>Contact Paola</a>
+          <button class="outline-button" id="paobot-next" type="button" data-copy="paobotNext" hidden>Another thought</button>
+          <button class="outline-button" id="paobot-home" type="button">Stay on Home</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <dialog class="case-window" id="case-window" aria-labelledby="case-title">
+    <div class="case-toolbar">
+      <span><span class="nav-icon folder-icon" aria-hidden="true"></span> <span data-copy="projects">Projects</span></span>
+      <button id="close-case" class="icon-button" type="button" aria-label="Close project" data-copy-aria="closeCase" autofocus>×</button>
+    </div>
+    <div class="case-scroll" id="case-content"></div>
+  </dialog>
+</body>
+</html>
